@@ -13,7 +13,7 @@ class BarangController extends Controller
     public function index()
     {
         $barang = Barang::with(['kategori', 'suplier'])->get(); // Eager load relasi
-        return view('barang/data-barang', compact('barang'));
+        return view('barang.index', compact('barang'));
     }
 
     public function create()

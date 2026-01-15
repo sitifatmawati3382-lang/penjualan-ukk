@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Dashboard E-Penjualan</title> 
+        <title>Dashboard E-Penjualan</title>
         <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
         <style>
             /* Efek hover untuk nav-link di sidebar sekunder */
@@ -18,49 +18,49 @@
     </head>
     <body>
         <div class="container-fluid">
-            <div class="row"> 
-                <div class="col bg-primary text-white py-3"> 
+            <div class="row">
+                <div class="col bg-dark-subtle text-dark py-3">
                     <h1>E-Penjualan</h1>
                 </div>
             </div>
-            <div class="row"> <div class="col-3 bg-secondary text-white min-vh-100"> <h3 class="mt-2">Daftar Menu</h3>
+            <div class="row"> <div class="col-3 bg-body-secondary text-dark min-vh-100"> <h3 class="mt-2">Daftar Menu</h3>
                     <hr>
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a href="/dashboard" class="nav-link text-white">Dashboard</a>
+                            <a href="/dashboard" class="nav-link text-dark">Dashboard</a>
                         </li>
                         <hr>
                         <li class="nav-item">
-                            <a href="{{ route('barang.index') }}" class="nav-link text-white">Data Barang</a>
+                            <a href="{{ route('barang.index') }}" class="nav-link text-dark">Data Barang</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('suplier.index')}}" class="nav-link text-white">Data Suplier</a>
+                            <a href="{{route('suplier.index')}}" class="nav-link text-dark">Data Suplier</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('pelanggan.index')}}" class="nav-link text-white">Data Pelanggan</a>
+                            <a href="{{route('pelanggan.index')}}" class="nav-link text-dark">Data Pelanggan</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('kategori.index')}}" class="nav-link text-white">Data Kategori Barang</a>
+                            <a href="{{route('kategori.index')}}" class="nav-link text-dark">Data Kategori Barang</a>
                         </li>
                         <hr>
                         <li class="nav-item">
-                            <a href="{{ route('kasir.index') }}" class="nav-link text-white">Transaksi</a>
+                            <a href="{{ route('kasir.index') }}" class="nav-link text-dark">Transaksi</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('laporan.harian')}}" class="nav-link text-white">Laporan Penjualan</a>
+                            <a href="{{route('laporan.harian')}}" class="nav-link text-dark">Laporan Penjualan</a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link text-white">Profile</a>
+                            <a href="" class="nav-link text-dark">Profile</a>
                         </li>
                         <li class="nav-item">
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf
-                                <button type="submit" class="nav-link text-white">Logout</button>
+                                <button type="submit" class="nav-link text-dark">Logout</button>
                             </form>
                         </li>
                     </ul>
                 </div>
-                <div class="col-9 bg-light min-vh-100"> 
+                <div class="col-9 bg-light min-vh-100">
                     @yield('konten')
                 </div>
             </div>

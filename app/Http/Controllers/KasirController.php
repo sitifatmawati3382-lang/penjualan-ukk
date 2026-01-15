@@ -40,13 +40,13 @@ class KasirController extends Controller
     {
         $request->validate([
             'keranjang' => 'required|array',
-            'keranjang.*.id' => 'required|string',
+            'keranjang.*.id' => 'required|integer',
             'keranjang.*.jumlah' => 'required|integer|min:1',
             'total_bayar' => 'required|integer',
             'jumlah_bayar' => 'required|integer',
-            'id_pelanggan' => 'nullable|string',
+            'id_pelanggan' => 'nullable|integer',
         ]);
-        
+
         DB::beginTransaction();
         try {
             $kembalian = $request->jumlah_bayar - $request->total_bayar;
@@ -107,7 +107,7 @@ class KasirController extends Controller
             return back()->with('error', 'Terjadi kesalahan saat memproses transaksi: ' . $e->getMessage());
         }
     }
-    
+
     // public function struk($id_transaksi)
     // {
     //     $transaksi = Transaksi::findOrFail($id_transaksi);

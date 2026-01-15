@@ -9,7 +9,7 @@ class SuplierController extends Controller
 {
     public function index(){
         $suplier = Suplier::all();
-        return view('suplier.data-suplier', compact('suplier'));
+        return view('suplier.index', compact('suplier'));
     }
 
     public function create()
